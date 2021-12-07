@@ -17,10 +17,8 @@ let toType = prompt("Enter the type of the value");
 //     switch(toType) {
 //         case "boolean":
 //             return Boolean(value);
-//             break;
 //         case "string":
 //             return String(value);
-//             break;
 //         case "number":
 //             return Number(value);
 //     }
@@ -32,16 +30,14 @@ let toType = prompt("Enter the type of the value");
 //     switch(toType) {
 //         case "boolean":
 //             return Boolean(value);
-//             break;
 //         case "string":
 //             return String(value);
-//             break;
 //         case "number":
 //             return Number(value);
 //     }
 // }
 
-// console.log(convertType2(value, toType));
+console.log(convertType2(value, toType));
 
 let convertType3 = (value, toType) => 
 toType === "boolean" ? Boolean(value) 
