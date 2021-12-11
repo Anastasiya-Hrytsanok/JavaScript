@@ -1,8 +1,5 @@
-let str = prompt("Enter a string");
+let enteredStr = prompt("Enter a string");
 
-function deleteChars(str) {
-    let cutStr = str.slice(1, str.length - 1);
-    return cutStr;
-}
+let deleteChars = (str) => str.slice(1, str.length - 1);
 
-console.log(deleteChars(str));
+console.log(deleteChars(enteredStr));

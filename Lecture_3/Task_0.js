@@ -1,9 +1,11 @@
-let name = prompt("Enter your name, please");
+let initialName = prompt("Enter your name, please");
 
-function sayHello() {
+function sayHello(name) {
     if (name === "Mark") {
-        console.log("Hi, " + name + "!");
-    } else {console.log("Hello, " + name + "!");}
+        console.log(`Hi, ${name}!`);
+    } else {
+        console.log(`Hello, ${name}!`);
+    }
 }
 
-sayHello(name);
+sayHello(initialName);

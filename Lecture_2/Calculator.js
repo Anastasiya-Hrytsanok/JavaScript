@@ -1,16 +1,13 @@
 let arr = [];
 let sum = 0;
 let i = 0;
-arr[0] = prompt('Введите число');
-while (arr[i] != 15) {
-    arr.push(arr[i]);
-    i++;
-    arr[i] = prompt('Введите число');
+let userInput = prompt('Введите число');
+while (userInput !== '15') {
+    arr.push(userInput);
+    userInput = prompt('Введите число');
 };
 console.log(arr);
-arr = arr.map(item => {
-    return item = Number(item);
-});
+arr = arr.map(item => item = Number(item));
 for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
 };

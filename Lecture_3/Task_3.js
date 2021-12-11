@@ -1,5 +1,5 @@
-let n = prompt("Enter an even number");
+let num = prompt("Enter an even number");
 
-let isEven = (n) => n % 2 === 0 ? true : false;
+let isEven = (n) => n % 2 === 0;
 
-console.log(isEven(n));
+console.log(isEven(num));

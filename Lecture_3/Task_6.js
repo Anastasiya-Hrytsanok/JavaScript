@@ -27,22 +27,23 @@ let toType = prompt("Enter the type of the value");
 // console.log(convertType1(value, toType));
 
 // let convertType2 = function (value, toType) {
-//     switch(toType) {
+//     switch (toType) {
 //         case "boolean":
 //             return Boolean(value);
 //         case "string":
 //             return String(value);
 //         case "number":
 //             return Number(value);
+//         default: throw new Error("Error");
 //     }
 // }
 
 console.log(convertType2(value, toType));
 
-let convertType3 = (value, toType) => 
-toType === "boolean" ? Boolean(value) 
-: toType === "string" ? String(value)
-: toType === "number" ? Number(value)
-: console.log("Error")
+let convertType3 = (value, toType) =>
+    toType === "boolean" ? Boolean(value) :
+    toType === "string" ? String(value) :
+    toType === "number" ? Number(value) :
+    console.log("Error")
 
 console.log(convertType3(value, toType));

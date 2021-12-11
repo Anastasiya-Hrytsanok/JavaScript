@@ -1,12 +1,9 @@
-let num = prompt("Enter a number");
-let arr;
-let sum;
+let userInput = prompt("Enter a number");
 
-function sumDidits() {
-    debugger;
+function sumDidits(num) {
     if (num.length > 1) {
-        sum = 0;
-        arr = [];
+        let sum = 0;
+        let arr = [];
         for (let i = 0; i < num.length; i++) {
             arr.push(Number(num.charAt(i)));
         }
@@ -14,8 +11,10 @@ function sumDidits() {
             sum += arr[i];
         }
         num = sum.toString();
-        if (num.length > 1) {sumDidits(num)}
+        if (num.length > 1) {
+            sumDidits(num)
+        }
         return num;
     }
 }
-console.log(sumDidits(num));
+console.log(sumDidits(userInput));
