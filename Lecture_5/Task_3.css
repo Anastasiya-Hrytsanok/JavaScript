@@ -1,0 +1,9 @@
+* {
+    margin-top: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}

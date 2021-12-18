@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Task_3.css">
     <script src="Task_3.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <form name="shapeRequest">
+        <label for="figureColor">Enter the figure color</label>
+        <input type="text" name="figureColor" id="figureColor" value="yellow">
+        <label for="topDistance">Enter the top distance</label>
+        <input type="text" name="topDistance" id="topDistance" value="50">
+        <label for="leftDistance">Enter the left distance</label>
+        <input type="text" name="leftDistance" id="leftDistance" value="50">
+        <label for="radiusOrSide">Enter the radius or the first side</label>
+        <input type="text" name="radiusOrSide" id="radiusOrSide" value="50">
+        <label for="side">Enter the second side (if necessary)</label>
+        <input type="text" name="side" id="side" value="50">
+        <button id="send">Send</button>
+        <p>If you want to draw:<br>
+            circle - press Q;<br>
+            square - press W;<br>
+            rectangle - press L.
+        </p>
+    </form>    
+    <canvas id="myCanvas" width="500px" height="500px" style="border:1px solid #d3d3d3;"></canvas>
 </body>
 </html>

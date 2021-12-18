@@ -1,20 +1,22 @@
-nav {
+#menu {
     display: flex;
     flex-direction: row;
-    background-color: blueviolet;
     color: white;
     width: 50%;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-li {
-    list-style-type: none;
+
+.menuItem {
+    background-color: blueviolet;
+    width: 100px;
+    text-align: center;
 }
-.dropdown-content {
+
+.submenu {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
     flex-direction: column;
 }

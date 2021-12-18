@@ -1,10 +1,11 @@
 let ul = document.createElement("ul");
 document.body.append(ul);
 
-let enteredNum = Number(prompt("Введите число:"));
+let enteredNum = prompt("Введите число:");
 console.log(enteredNum);
 
-while (enteredNum !== 0 && !isNaN(enteredNum)) {
+while (!!enteredNum && !isNaN(enteredNum)) {
+    enteredNum = Number(enteredNum);
     let lis = [...document.getElementsByTagName("li")];
     let li = document.createElement("li");
     if (lis.length === 0) {
@@ -18,5 +19,5 @@ while (enteredNum !== 0 && !isNaN(enteredNum)) {
         li.innerText = summ;
     }
     ul.append(li);
-    enteredNum = Number(prompt("Введите число:"));
+    enteredNum = prompt("Введите число:");
 }

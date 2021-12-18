@@ -1,35 +1,91 @@
-let div = document.createElement("div");
+const canvas = document.getElementById("myCanvas");
 
-let drawFigure = (title, color, top, left, radiusOrSide, side) => {
-    div.style.backgroundColor = color;
-    div.style.top = top + "px";
-    div.style.left = left + "px";
-    div.style.width = radiusOrSide + "px";
-    switch (title) {
-        case "круг":
-            drawCircle(color, top, left, radiusOrSide);
+const drawByKey = (e) => {
+    const ctx = canvas.getContext("2d");
+    switch (e.code) {
+        case "KeyQ":
+            drawCircle(ctx);
             break;
-        case "квадрат":
-            drawSquare(color, top, left, radiusOrSide);
+        case "KeyW":
+            drawSquare(ctx);
             break;
-        case "прямоугольник":
-            drawRectangle(color, top, left, radiusOrSide, side);
-        // default:
-        //     throw new Error;
+        case "KeyL":
+            drawRectangle(ctx);
+            break;
     }
+    unsubscribeHandlers();
 }
 
-let drawCircle = (radiusOrSide) => {
-    div.style.height = radiusOrSide + "px";
-    div.style.borderRadius = "50%";
+const unsubscribeHandlers = () => {
+    window.onkeydown = undefined;
 }
 
-let drawSquare = (radiusOrSide) => {
-    div.style.height = radiusOrSide + "px";
+let getFormData = () => {
+    let shapeRequest = document.forms['shapeRequest'];
+    var color = shapeRequest.elements['figureColor'].value;
+    var top = Number(shapeRequest.elements['topDistance'].value);
+    var left = Number(shapeRequest.elements['leftDistance'].value);
+    var radiusOrSide = Number(shapeRequest.elements['radiusOrSide'].value);
+    var side = Number(shapeRequest.elements['side'].value);
+    return {
+        color,
+        top,
+        left,
+        radiusOrSide,
+        side
+    };
 }
 
-let drawRectangle = (side) => {
-    div.style.height = side + "px";
+let clearCanvas = (ctx) => {
+    ctx.clearRect(0, 0, 500, 500);
 }
 
-document.body.append(div);
+let drawCircle = (ctx) => {
+    const {
+        color,
+        top,
+        left,
+        radiusOrSide
+    } = getFormData();
+    ctx.fillStyle = color;
+    clearCanvas(ctx);
+    ctx.beginPath();
+    ctx.arc(left + radiusOrSide, top + radiusOrSide, radiusOrSide, 0, 2 * Math.PI);
+    ctx.fill();
+}
+
+let drawSquare = (ctx) => {
+    const {
+        color,
+        top,
+        left,
+        radiusOrSide
+    } = getFormData();
+    ctx.fillStyle = color;
+    clearCanvas(ctx);
+    ctx.beginPath();
+    ctx.rect(left, top, radiusOrSide, radiusOrSide);
+    ctx.fill();
+}
+
+let drawRectangle = (ctx) => {
+    const {
+        color,
+        top,
+        left,
+        radiusOrSide,
+        side
+    } = getFormData();
+    ctx.fillStyle = color;
+    clearCanvas(ctx);
+    ctx.beginPath();
+    ctx.rect(left, top, radiusOrSide, side);
+    ctx.fill();
+}
+
+let subscribeHandlers = (e) => {
+    e.preventDefault();
+    window.onkeydown = drawByKey;
+}
+
+document.getElementById("send").onclick = subscribeHandlers;
