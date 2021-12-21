@@ -1,0 +1,55 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#amount {
+    width: 200px;
+}
+
+#amount:invalid {
+    border: 2px dashed red;
+}
+
+#amount:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+}
+
+#diagram {
+    height: 200px;
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    background-image: linear-gradient(90deg, green 50%, red 50%);
+}
+
+#plus,  #minus {
+    background-color: white;
+    width: 25px;
+}
+
+#max {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+}
+
+#min {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
+
+#dohod {
+    color: green;
+}
+
+#rashod {
+    color: red;
+}

@@ -22,11 +22,11 @@ const unsubscribeHandlers = () => {
 
 let getFormData = () => {
     let shapeRequest = document.forms['shapeRequest'];
-    var color = shapeRequest.elements['figureColor'].value;
-    var top = Number(shapeRequest.elements['topDistance'].value);
-    var left = Number(shapeRequest.elements['leftDistance'].value);
-    var radiusOrSide = Number(shapeRequest.elements['radiusOrSide'].value);
-    var side = Number(shapeRequest.elements['side'].value);
+    let color = shapeRequest.elements['figureColor'].value;
+    let top = Number(shapeRequest.elements['topDistance'].value);
+    let left = Number(shapeRequest.elements['leftDistance'].value);
+    let radiusOrSide = Number(shapeRequest.elements['radiusOrSide'].value);
+    let side = Number(shapeRequest.elements['side'].value);
     return {
         color,
         top,
