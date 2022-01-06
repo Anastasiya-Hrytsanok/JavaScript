@@ -1,4 +1,4 @@
-let data = (dat) => {
+let getDayOfWeekName = (dat) => {
     switch (dat) {
         case 0:
             console.log("воскресенье");
@@ -24,4 +24,4 @@ let data = (dat) => {
     }
 }
 
-data((new Date(2000, 2, 4).getDate()));
+getDayOfWeekName((new Date(2000, 2, 4).getDate()));
