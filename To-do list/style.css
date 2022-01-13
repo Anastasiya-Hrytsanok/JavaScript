@@ -4,8 +4,8 @@
 }
 
 .main_list {
-  background: -webkit-gradient(linear, left top, left bottom, from(#020060), to(#600060));
-  background: linear-gradient(#020060, #600060);
+  background: -webkit-gradient(linear, left top, left bottom, from(#020060), to(#085fe2));
+  background: linear-gradient(#020060, #085fe2);
   width: 100vw;
   height: 100vh;
   padding-top: 5%;
@@ -13,7 +13,7 @@
 }
 
 .main_list__list_header {
-  background-color: #750082;
+  background-color: #1202a3;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   border: 2px solid white;
@@ -61,28 +61,30 @@
   width: 8rem;
   border-radius: 30px;
   border: 2px solid white;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: white;
   opacity: 0.7;
-  margin-bottom: 5px;
   background-color: #4169E1;
+  margin-bottom: 5px;
+  background-color: #03206e;
 }
 
 .main_list__list_header .main_list__name div #plusTask:hover {
   opacity: 1;
 }
 
-.main_list__list_header .main_list__name div #sortDyPriority {
+.main_list__list_header .main_list__name div #main_list__sortByPriority #sortByPriority {
   width: 8rem;
   border-radius: 30px;
   border: 2px solid white;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: white;
   opacity: 0.7;
-  background-color: #7B68EE;
+  background-color: #4169E1;
+  text-align: center;
 }
 
-.main_list__list_header .main_list__name div #sortDyPriority:hover {
+.main_list__list_header .main_list__name div #main_list__sortByPriority #sortByPriority:hover {
   opacity: 1;
 }
 
@@ -90,11 +92,12 @@
   width: 8rem;
   border-radius: 30px;
   border: 2px solid white;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: white;
   opacity: 0.7;
+  background-color: #4169E1;
   margin-right: 3px;
-  background-color: #20B2AA;
+  opacity: 1;
 }
 
 .main_list__list_header div #all:hover {
@@ -105,11 +108,11 @@
   width: 8rem;
   border-radius: 30px;
   border: 2px solid white;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: white;
   opacity: 0.7;
+  background-color: #4169E1;
   margin-right: 3px;
-  background-color: #2E8B57;
 }
 
 .main_list__list_header div #active:hover {
@@ -120,10 +123,10 @@
   width: 8rem;
   border-radius: 30px;
   border: 2px solid white;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: white;
   opacity: 0.7;
-  background-color: #556B2F;
+  background-color: #4169E1;
 }
 
 .main_list__list_header div #finished:hover {
@@ -173,26 +176,28 @@
   width: 100%;
 }
 
-.content .content__form .content__item .content__cross, .content .content__form .content__item .content__check_mark {
+.content .content__form .content__item .content__cross, .content .content__form .content__item .content__check_mark, .content .content__form .content__item .content__pencil {
   opacity: 0.7;
-  width: 48px;
-  height: 48px;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
 }
 
-.content .content__form .content__item .content__cross:hover, .content .content__form .content__item .content__check_mark:hover {
+.content .content__form .content__item .content__cross:hover, .content .content__form .content__item .content__check_mark:hover, .content .content__form .content__item .content__pencil:hover {
   opacity: 1;
 }
 
 .content .content__form .content__item .content__task {
-  background-color: #d5dff7;
+  background-color: #8daff7;
   border-radius: 30px;
-  border: 2px solid #6781c2;
-  font-family: 'Poppins', sans-serif;
+  border: 2px solid #031b58;
+  font-family: 'Inter', sans-serif;
   width: 100%;
   margin: 5px 10px 5px 10px;
   padding: 5px;
-  color: #483D8B;
-  font-family: 'Rubik', sans-serif;
+  color: #fdfdfd;
+  -webkit-text-decoration-color: #fdfdfd;
+          text-decoration-color: #fdfdfd;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -205,7 +210,7 @@
   width: 8rem;
   border-radius: 30px;
   border: 2px solid white;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: white;
   opacity: 0.7;
   background-color: #4169E1;
@@ -223,13 +228,13 @@
   height: 200px;
   left: calc(50% - 100px);
   top: calc(50% - 100px);
-  background-color: #815d7e;
+  background-color: #7381fd;
 }
 
 .modal {
   width: 100%;
   height: 100%;
-  background-color: rgba(32, 32, 31, 0.7);
+  background-color: rgba(2, 18, 71, 0.7);
   position: fixed;
   z-index: 1;
 }
@@ -240,7 +245,9 @@
   height: 230px;
   left: calc(50% - 215px);
   top: calc(50% - 115px);
-  background-color: #e7e1f1;
+  background-color: #d0dcfc;
+  background-image: url("./images/list_header_fon_1.png");
+  background-size: cover;
   padding: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,27 +260,15 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 30px;
-  font-family: 'Poppins', sans-serif;
-  color: #c760ca;
+  font-family: 'Inter', sans-serif;
+  color: #e2e4f7;
   border: 2px solid white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .modal #plusTaskForm #taskText {
   height: 25px;
   border-radius: 10px;
-}
-
-.modal #plusTaskForm #nameHigh {
-  color: #cf0f0f;
-}
-
-.modal #plusTaskForm #nameMedium {
-  color: #ecde13;
-}
-
-.modal #plusTaskForm #nameLow {
-  color: #31c031;
+  font-family: 'Inter', sans-serif;
 }
 
 .modal .modal_buttons {
@@ -289,11 +284,10 @@
   width: 8rem;
   border-radius: 30px;
   border: 2px solid white;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: white;
   opacity: 0.7;
-  background-color: #56198f;
-  border-color: #390441;
+  background-color: #4169E1;
 }
 
 .modal .modal_buttons #addBtn:hover, .modal .modal_buttons #cancelBtn:hover {

@@ -11,8 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans&family=Poppins:wght@600&family=Pushster&family=Roboto:wght@300&family=Waterfall&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lato&family=Noto+Sans&family=Poppins:wght@400;600&family=Roboto:wght@300&family=Rubik&family=Source+Sans+Pro:wght@400;700&family=Waterfall&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/icon.svg" type="image/svg">
@@ -23,7 +25,7 @@
 <body>
     <article class="modal display-none">
         <form id="plusTaskForm">
-            <input type="text" id="taskText" placeholder="Enter new Task" autofocus>
+            <input type="text" id="taskText" placeholder="Enter new Task">
             <div class="modal__choosePriority">
                 <p>Choose the task priority:</p>
                 <input type="radio" id="high" name="priority" value="high">
@@ -45,13 +47,22 @@
                 <h1>To-do list</h1>
                 <div>
                     <button type="submit" id="plusTask">+ Task</button>
-                    <button type="submit" id="sortDyPriority">Sort by priority</button>
+                    <form id="main_list__sortByPriority">
+                        <!-- <select id="sortByPriority">
+                            <option selected disabled>Sort by priority</option>
+                            <option value="highItem">High</option>
+                            <option value="mediumItem">Medium</option>
+                            <option value="lowItem">Low</option>
+                            <option value="noneItem">None</option>
+                        </select> -->
+                        <!-- <button type="submit" id="sortByName">Sort by name</button> -->
+                    </form>
                 </div>
             </div>
             <div>
-                <button type="submit" id="all">All</button>
-                <button type="submit" id="active">Active</button>
-                <button type="submit" id="finished">Finished</button>
+                <button type="submit" id="all" class="tab">All</button>
+                <button type="submit" id="active" class="tab">Active</button>
+                <button type="submit" id="finished" class="tab">Finished</button>
             </div>
         </article>
         <article class="content">
